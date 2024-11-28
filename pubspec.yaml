@@ -30,6 +30,8 @@ environment:
 dependencies:
   awesome_flutter_extensions: ^1.2.0
   cupertino_icons: ^1.0.8
+  expandable_page_view: ^1.0.17
+  fl_chart: ^0.69.2
   flutter:
     sdk: flutter
   flutter_svg: ^2.0.15
