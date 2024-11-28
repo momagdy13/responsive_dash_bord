@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'package:responsive_dash_bord/widgets/custom_container.dart';
+import 'package:responsive_dash_bord/widgets/custom_background_container.dart';
 import 'package:responsive_dash_bord/widgets/my_cards_section.dart';
 import 'package:responsive_dash_bord/widgets/transction_history.dart';
 
@@ -9,8 +8,8 @@ class MyCardsAndTransctionHistorySection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomContainer(
-        cild: Column(
+    return const CustomBackgroundContainer(
+        child: Column(
       children: [
         MyCardsSection(),
         Divider(

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'package:responsive_dash_bord/utlis/app_style.dart';
+import 'package:responsive_dash_bord/utlis/app_styles.dart';
 import 'package:responsive_dash_bord/widgets/dots_indicator.dart';
 import 'package:responsive_dash_bord/widgets/my_cards_page_view.dart';
 
@@ -36,7 +35,7 @@ class _MyCardsSectionState extends State<MyCardsSection> {
           width: 420,
           child: Text(
             'My card',
-            style: AppStyle.styleSemiBold20,
+            style: AppStyles.styleSemiBold20(context),
           ),
         ),
         const SizedBox(

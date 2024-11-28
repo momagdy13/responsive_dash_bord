@@ -1,41 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dash_bord/utlis/app_style.dart';
+import 'package:responsive_dash_bord/utlis/app_styles.dart';
 
 class CustomTextField extends StatelessWidget {
-  const CustomTextField(
-      {super.key, required this.hintText, required this.title});
-  final String hintText, title;
+  const CustomTextField({super.key, required this.hint});
+  final String hint;
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 16),
-          child: Text(
-            title,
-            style: AppStyle.styleSemiBold16,
+    return TextField(
+      decoration: InputDecoration(
+          hintText: hint,
+          hintStyle: AppStyles.styleRegular16(context).copyWith(
+            color: const Color(0xFFAAAAAA),
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(right: 16),
-          child: TextField(
-              decoration: InputDecoration(
-                  fillColor: const Color(0xFFFAFAFA),
-                  filled: true,
-                  hintText: hintText,
-                  hintStyle: AppStyle.styleRegular12,
-                  border: buildBorder(),
-                  focusedBorder: buildBorder(),
-                  enabledBorder: buildBorder())),
-        ),
-      ],
+          fillColor: const Color(0xFFFAFAFA),
+          filled: true,
+          border: buildBorder(),
+          enabledBorder: buildBorder(),
+          focusedBorder: buildBorder()),
     );
   }
 
   OutlineInputBorder buildBorder() {
     return OutlineInputBorder(
-        borderRadius: BorderRadius.circular(12),
-        borderSide: const BorderSide(color: Color(0xFFFAFAFA)));
+      borderRadius: BorderRadius.circular(12),
+      borderSide: const BorderSide(
+        color: Color(0xFFFAFAFA),
+      ),
+    );
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dash_bord/utlis/app_style.dart';
+import 'package:responsive_dash_bord/utlis/app_styles.dart';
 
 class IncomeSectionHeader extends StatelessWidget {
   const IncomeSectionHeader({
@@ -13,7 +13,7 @@ class IncomeSectionHeader extends StatelessWidget {
       children: [
         Text(
           'Income',
-          style: AppStyle.styleSemiBold20,
+          style: AppStyles.styleSemiBold20(context),
         ),
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
@@ -28,7 +28,7 @@ class IncomeSectionHeader extends StatelessWidget {
             children: [
               Text(
                 'Monthly',
-                style: AppStyle.styleMedium16,
+                style: AppStyles.styleMedium16(context),
               ),
               const SizedBox(
                 width: 16,

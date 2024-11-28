@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dash_bord/utlis/app_style.dart';
+import 'package:responsive_dash_bord/utlis/app_styles.dart';
 import 'package:responsive_dash_bord/widgets/transction_history_list_view.dart';
 
 class TrasnctionHistory extends StatelessWidget {
@@ -45,11 +45,11 @@ class TansctionHistoryHeader extends StatelessWidget {
       children: [
         Text(
           'Transaction History',
-          style: AppStyle.styleSemiBold20,
+          style: AppStyles.styleSemiBold20(context),
         ),
         Text(
           'See all',
-          style: AppStyle.styleMedium16.copyWith(
+          style: AppStyles.styleMedium16(context).copyWith(
             color: const Color(0xFF4EB7F2),
           ),
         )

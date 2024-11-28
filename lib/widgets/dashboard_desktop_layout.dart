@@ -4,10 +4,10 @@ import 'package:responsive_dash_bord/widgets/custom_drawer.dart';
 import 'package:responsive_dash_bord/widgets/income_section.dart';
 import 'package:responsive_dash_bord/widgets/my_cards_and_transction_history_section.dart';
 
-class DashBordDesktopLayout extends StatelessWidget {
-  const DashBordDesktopLayout({super.key});
 
-  @override
+class DashboardDesktopLayout extends StatelessWidget {
+  const DashboardDesktopLayout({super.key});
+
   @override
   Widget build(BuildContext context) {
     return const Row(

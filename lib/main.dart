@@ -12,7 +12,7 @@ class ResponsiveDashBord extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: DashbordScreen(),
+      home: DashBoradScreen(),
     );
   }
 }

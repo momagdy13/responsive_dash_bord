@@ -1,47 +1,51 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_bord/models/drawer_model.dart';
-import 'package:responsive_dash_bord/models/latest_trans_model.dart';
+import 'package:responsive_dash_bord/models/user_info_model.dart';
 import 'package:responsive_dash_bord/utlis/app_images.dart';
 import 'package:responsive_dash_bord/widgets/custom_drawer_item.dart';
-import 'package:responsive_dash_bord/widgets/drawer_item_list_view.dart';
-import 'package:responsive_dash_bord/widgets/user_info_list.dart';
+import 'package:responsive_dash_bord/widgets/drawer_items_list_view.dart';
+import 'package:responsive_dash_bord/widgets/user_info_list_tile.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
-  static LatestTransModel item = const LatestTransModel(
-      email: 'demo@gmail.com', name: 'Lekan Okeowo', image: Assets.imagesAvtar);
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
-      child: CustomScrollView(
+      width: MediaQuery.sizeOf(context).width * .7,
+      color: const Color.fromRGBO(255, 255, 255, 1),
+      child: const CustomScrollView(
         slivers: [
           SliverToBoxAdapter(
-            child: UserInfoList(
-              latestTransModel: item,
+            child: UserInfoListTile(
+              userInfoModel: UserInfoModel(
+                  image: Assets.imagesAvatar3,
+                  title: 'Lekan Okeowo',
+                  subTitle: 'demo@gmail.com'),
             ),
           ),
-          const SliverToBoxAdapter(
+          SliverToBoxAdapter(
             child: SizedBox(
               height: 8,
             ),
           ),
-          const DrawerItemListView(),
-          const SliverFillRemaining(
+          DrawerItemsListView(),
+          SliverFillRemaining(
             hasScrollBody: false,
             child: Column(
               children: [
                 Expanded(
-                  child: SizedBox(
-                    height: 48,
-                  ),
+                    child: SizedBox(
+                  height: 20,
+                )),
+                InActiveDrawerItem(
+                  drawerItemModel: DrawerItemModel(
+                      title: 'Setting system', image: Assets.imagesSettings),
                 ),
                 InActiveDrawerItem(
-                    drawerItemModel: DrawerItemModel(
-                        title: 'Setting system', image: Assets.imagesSetting2)),
-                InActiveDrawerItem(
-                    drawerItemModel: DrawerItemModel(
-                        title: 'Logout account', image: Assets.imagesLogout)),
+                  drawerItemModel: DrawerItemModel(
+                      title: 'Logout account', image: Assets.imagesLogout),
+                ),
                 SizedBox(
                   height: 48,
                 )

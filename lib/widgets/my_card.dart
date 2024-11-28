@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:responsive_dash_bord/utlis/app_images.dart';
-import 'package:responsive_dash_bord/utlis/app_style.dart';
+import 'package:responsive_dash_bord/utlis/app_styles.dart';
+
 
 class MyCard extends StatelessWidget {
   const MyCard({super.key});
@@ -13,7 +14,7 @@ class MyCard extends StatelessWidget {
       child: Container(
         decoration: ShapeDecoration(
           image: const DecorationImage(
-              fit: BoxFit.fill, image: AssetImage(Assets.imagesCard)),
+              fit: BoxFit.fill, image: AssetImage(Assets.imagesCardBackground)),
           color: const Color(0xFF4EB7F2),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
@@ -26,14 +27,14 @@ class MyCard extends StatelessWidget {
               contentPadding:
                   const EdgeInsets.only(left: 31, right: 42, top: 16),
               title: Text('Name card',
-                  style: AppStyle.styleRegular16.copyWith(
+                  style: AppStyles.styleRegular16(context).copyWith(
                     color: Colors.white,
                   )),
               subtitle: Text(
                 'Syah Bandi',
-                style: AppStyle.styleMedium20,
+                style: AppStyles.styleMedium20(context),
               ),
-              trailing: SvgPicture.asset(Assets.imagesConvertCard),
+              trailing: SvgPicture.asset(Assets.imagesGallery),
             ),
             const Expanded(child: SizedBox()),
             Padding(
@@ -43,13 +44,13 @@ class MyCard extends StatelessWidget {
                 children: [
                   Text(
                     '0918 8124 0042 8129',
-                    style: AppStyle.styleSemiBold24.copyWith(
+                    style: AppStyles.styleSemiBold24(context).copyWith(
                       color: Colors.white,
                     ),
                   ),
                   Text(
                     '12/20 - 124',
-                    style: AppStyle.styleRegular16
+                    style: AppStyles.styleRegular16(context)
                         .copyWith(color: Colors.white),
                   ),
                 ],
